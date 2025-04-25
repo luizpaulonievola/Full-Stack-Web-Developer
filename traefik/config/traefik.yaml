@@ -1,0 +1,37 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+log:
+  level: DEBUG
+
+accessLog: {}
+
+api:
+  dashboard: true
+  insecure: true     # Se quiser acessar sem TLS em /dashboard
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+  traefik:
+    address: ":8080"
+  metrics:
+    address: ":8082"       # Porta exposta para Prometheus
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: monitoring     # Isso pode ser alterado, ver observação abaixo
+  file:
+    filename: /etc/traefik/dynamic.yaml
+    watch: true
+
+metrics:
+  prometheus:
+    entryPoint: metrics     # Deve existir em entryPoints
+    addEntryPointsLabels: true
+    addServicesLabels: true
+    addRoutersLabels: true

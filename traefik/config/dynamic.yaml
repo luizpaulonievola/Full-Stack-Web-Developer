@@ -1,0 +1,15 @@
+http:
+  middlewares:
+    auth-dashboard:
+      basicAuth:
+        users:
+          - "maletical:$apr1$DYvdy1gZ$RGAhEsvadXwsPF7qz8atT0"
+
+  routers:
+    dashboard-secure:
+      rule: "PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
+      entryPoints:
+        - traefik
+      service: api@internal
+      middlewares:
+        - auth-dashboard

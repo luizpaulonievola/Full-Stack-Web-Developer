@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor
+    hostname: cadvisor
+    platform: linux/aarch64
+    container_name: cadvisor
+    user: "root"
+    command: ["-port=8585"]
+    networks:
+      - monitoring
+    ports:
+      - "8585:8585"
+    volumes:
+      - /:/rootfs:ro
+      - "/var/run:/var/run:ro"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - "/dev/disk/:/dev/disk:ro"
+    restart: unless-stopped
+    privileged: true
+    mem_limit: 500M
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8585"]
+      interval: 10s
+      retries: 3
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    networks:
+      - monitoring
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    depends_on:
+      - cadvisor
+    restart: unless-stopped
+    mem_limit: 500M
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: "user"
+      GF_SECURITY_ADMIN_PASSWORD: "senha"
+      GF_INSTALL_PLUGINS: "grafana-strava-datasource"
+      GF_FEATURE_TOGGLES_ENABLE_ALPHA: "true"
+    networks:
+      - monitoring
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana-datasource-config.yaml:/etc/grafana/provisioning/datasources/*.yaml
+    ports:
+      - "9100:3000"
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    mem_limit: 500M
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    platform: linux/aarch64
+    restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+      - '--web.listen-address=:9101'
+    networks:
+      - monitoring
+    mem_limit: 250M
+
+volumes:
+  grafana_data:
+  prometheus_data:
+
+networks:
+  monitoring:
+    external: true
+
