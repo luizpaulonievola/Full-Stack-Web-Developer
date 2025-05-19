@@ -1,0 +1,66 @@
+{
+  "info": {
+    "page": 1,
+    "results": 1,
+    "seed": "4812938630f36010",
+    "version": "1.4"
+  },
+  "results": [
+    {
+      "cell": "602-226-600",
+      "dob": {
+        "age": 37,
+        "date": "1988-04-23T16:44:59.119Z"
+      },
+      "email": "maria.cruz@example.com",
+      "gender": "female",
+      "id": {
+        "name": "DNI",
+        "value": "60901189-P"
+      },
+      "location": {
+        "city": "Elche",
+        "coordinates": {
+          "latitude": "-33.8396",
+          "longitude": "111.4191"
+        },
+        "country": "Spain",
+        "postcode": 31044,
+        "state": "Navarra",
+        "street": {
+          "name": "Calle del Prado",
+          "number": 5721
+        },
+        "timezone": {
+          "description": "Bangkok, Hanoi, Jakarta",
+          "offset": "+7:00"
+        }
+      },
+      "login": {
+        "md5": "62b504c631c4ac6add64271eabeab14c",
+        "password": "pooppoop",
+        "salt": "yhYyrkMM",
+        "sha1": "0922dbbd396d497f4ea2b41057a22e720d77906f",
+        "sha256": "a11815a742c411b0db6bea458dedf66fda5b832c9eaa98854d7b58b0cdb79ebd",
+        "username": "brownpeacock354",
+        "uuid": "92ed9d3d-362c-4642-99b3-b4cbc95d4457"
+      },
+      "name": {
+        "first": "Mar\u00eda",
+        "last": "Cruz",
+        "title": "Ms"
+      },
+      "nat": "ES",
+      "phone": "953-822-349",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/76.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/76.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/76.jpg"
+      },
+      "registered": {
+        "age": 8,
+        "date": "2016-06-03T22:20:59.071Z"
+      }
+    }
+  ]
+}
