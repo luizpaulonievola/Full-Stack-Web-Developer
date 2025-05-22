@@ -26,3 +26,9 @@ Press CTRL+C to quit
  * Debugger PIN: 291-151-372
 38.42.102.254 - - [18/May/2025 17:19:37] "GET / HTTP/1.1" 200 -
 38.42.102.254 - - [18/May/2025 17:19:38] "GET /favicon.ico HTTP/1.1" 404 -
+
+#Desconectar de uma rede
+$ docker network disconect flasknetwork
+
+#Inspecionar uma rede
+$ docker network inspect
