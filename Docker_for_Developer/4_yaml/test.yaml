@@ -1,0 +1,35 @@
+# Instruções
+Nome: "Luiz"
+Idade: 37 # idade usuario
+Peso: 75.00 # float
+
+# Objeto
+objeto:
+  version: 1
+  arquivo: "text.md"
+
+versao: 1
+versao_atualizada: 1.1
+
+string: Texto digitado.
+string2: "Testo usando aspas"
+verdadeiro: True
+verdadeiro_dois: On
+falso: False
+falso_dois: Off
+
+lista: [1,2,3,4,5.0]
+lista_dois:
+  - 1
+  - 2
+  - 3
+  - "Texto"
+  - True
+
+obj: {a: 1,b: 2, c: 3, objeto: {a: 1, b: 2}}
+
+obj2:
+  a: 1
+  b: 2
+  objeto_interno:
+    x: 2
