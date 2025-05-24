@@ -1,0 +1,29 @@
+version: '3.8' # versão
+
+services:
+ db: # Nome do container de MySQL
+  image: mysql:latest # Nome da imagem; normalmente vem do hub ou após ser criada ou construida localmente
+  volumes:
+   - db_data:/var/lib/mysql # É possivel ter uma lista de volumes
+  restart: always
+  environment:
+   MYSQL_ROOT_PASSWORD: wordpress
+   MYSQL_DATABASE: wordpress
+   MYSQL_USER: luiz
+   MYSQL_PASSWORD: secreto
+
+ wordpress:
+  depends_on:
+   - db
+  image: wordpress:latest
+  ports:
+   - "8000:80"
+  restart: always
+  environment:
+   WORDPRESS_DB_HOST: db:3306
+   WORDPRESS_DB_USER: luiz
+   WORDPRESS_DB_PASSWORD: secreto
+   WORDPRESS_DB_NAME: wordpress
+
+volumes:
+ db_data: {} # Volume para persistencia dos dados
