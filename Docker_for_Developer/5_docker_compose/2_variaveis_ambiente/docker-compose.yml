@@ -6,11 +6,8 @@ services:
   volumes:
    - db_data:/var/lib/mysql # É possivel ter uma lista de volumes
   restart: always
-  environment:
-   MYSQL_ROOT_PASSWORD: wordpress
-   MYSQL_DATABASE: wordpress
-   MYSQL_USER: luiz
-   MYSQL_PASSWORD: secreto
+  env_file:
+    - ./config/db.env # Local com as senhas para evitar enviar ao github
 
  wordpress:
   depends_on:
@@ -19,11 +16,9 @@ services:
   ports:
    - "8000:80"
   restart: always
-  environment:
-   WORDPRESS_DB_HOST: db:3306
-   WORDPRESS_DB_USER: luiz
-   WORDPRESS_DB_PASSWORD: secreto
-   WORDPRESS_DB_NAME: wordpress
+  env_file:
+    - ./config/wp.env
+
 
 volumes:
  db_data: {} # Volume para persistencia dos dados
