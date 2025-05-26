@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db: # Container de MySQL
+    image: mysql:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    env_file:
+      - ./config/db.env
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-P", "3306", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend
+  wordpress:
+    depends_on: 
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    env_file:
+      - ./config/wp.env
+    networks:
+      - backend
+
+volumes:
+  db_data: {}
+networks:
+  backend:
+    driver: bridge
