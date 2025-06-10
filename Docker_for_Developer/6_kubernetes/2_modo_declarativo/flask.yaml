@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: flask-app
+  template: # A planta que diz ao deplyment como criar os pods
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: flask
+        image: luizpaulonievola/flask-kub-proj
+
+# 1. Cria os Pods que rodam a aplicação. Correto.
+#kubectl apply -f flask.yaml
+
+# 2. Cria o ponto de acesso estável para os Pods. Correto.
+#kubectl apply -f flask-service.yaml
+
+# 3. Usa a ferramenta do Minikube para testar a conexão. Perfeito.
+#minikube service flask-service --url
+
+# 4. Aqui está a parte interessante...
+#k delete -f flask.yaml
+# deployment.apps "flask-app-deployment" deleted
