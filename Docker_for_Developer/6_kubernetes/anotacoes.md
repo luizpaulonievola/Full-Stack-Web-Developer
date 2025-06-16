@@ -1,4 +1,4 @@
-Claro! Aqui está o seu texto formatado com Markdown para melhor organização e legibilidade, dividido em seções lógicas para **Docker Swarm** e **Kubernetes**.
+**Docker Swarm** e **Kubernetes**.
 
 ***
 
