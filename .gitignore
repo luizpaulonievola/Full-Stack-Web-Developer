@@ -2,3 +2,6 @@
 node_modules
 docker-nodejs/package-lock.json
 .vscode
+.cache
+__pycache__
+*.pyc
