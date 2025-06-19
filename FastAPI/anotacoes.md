@@ -160,3 +160,9 @@ TOTAL                             0      0   100%
 
 # Ignorar arquivos
 $ ignr -p python > .gitignore 
+
+❯ uvicorn fast_zero.app:app
+INFO:     Started server process [969382]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
