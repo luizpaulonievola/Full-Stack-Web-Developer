@@ -1,14 +1,69 @@
 from http import HTTPStatus
 
-from fastapi.testclient import TestClient
 
-from fast_zero.app import app
+def test_read_root_success_and_hello_world(client):
+    response = client.get('/')  # Act (Ação)
+
+    assert response.status_code == HTTPStatus.OK  # Assert (Verificação)
+    assert response.json() == {
+        'message': 'Berserk é o melhor mangá do mundo!'
+    }
 
 
-def test_read_root_success_and_hello_world():
-    client = TestClient(app)  # Arrange (Organização)
+def test_create_user(client):
+    response = client.post(  # UserSchema
+        '/users/',
+        json={
+            'username': 'test_user',
+            'password': 'password',
+            'email': 'test@test.com',
+        },
+    )
 
-    resp = client.get('/')  # Act (Ação)
+    # Voltou o status code correto?
+    assert response.status_code == HTTPStatus.CREATED
+    # Validar UserPubli
+    assert response.json() == {
+        'username': 'test_user',
+        'email': 'test@test.com',
+        'id': 1,
+    }
 
-    assert resp.status_code == HTTPStatus.OK  # Assert (Verificação)
-    assert resp.json() == {'message': 'Berserk é o melhor mangá do mundo!'}
+
+def test_read_user(client):
+    response = client.get('/users/')
+
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {
+        'users': [
+            {
+                'username': 'test_user',
+                'email': 'test@test.com',
+                'id': 1,
+            }
+        ]
+    }
+
+
+def test_update_user(client):
+    response = client.put(
+        '/users/1',
+        json={
+            'password': '123456',
+            'username': 'test_user_2',
+            'email': 'test@test.com',
+            'id': 1,
+        },
+    )
+
+    assert response.json() == {
+        'username': 'test_user_2',
+        'email': 'test@test.com',
+        'id': 1,
+    }
+
+
+def test_delete_user(client):
+    response = client.delete('/users/1')
+
+    assert response.json() == {'message': 'User deleted'}

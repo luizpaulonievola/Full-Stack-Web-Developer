@@ -166,3 +166,18 @@ INFO:     Started server process [969382]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+
+
+# CRUD - Create Read Update Delete
+
+Status code created: 201
+
+INFO   127.0.0.1:50710 - "GET /docs HTTP/1.1" 200
+INFO   127.0.0.1:50710 - "GET /openapi.json HTTP/1.1" 200
+INFO   127.0.0.1:57474 - "POST /users/ HTTP/1.1" 201
+INFO   127.0.0.1:57474 - "POST /users/ HTTP/1.1" 201
+INFO   127.0.0.1:57474 - "POST /users/ HTTP/1.1" 201
+INFO   127.0.0.1:55528 - "GET / HTTP/1.1" 200
+INFO   127.0.0.1:56010 - "GET /users/ HTTP/1.1" 200
+INFO   127.0.0.1:42704 - "PUT /users/1 HTTP/1.1" 200
+INFO   127.0.0.1:48590 - "DELETE /users/1 HTTP/1.1" 200
