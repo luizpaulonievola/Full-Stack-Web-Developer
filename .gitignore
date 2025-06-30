@@ -5,3 +5,4 @@ docker-nodejs/package-lock.json
 .cache
 __pycache__
 *.pyc
+database.db

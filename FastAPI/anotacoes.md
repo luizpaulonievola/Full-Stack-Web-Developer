@@ -181,3 +181,16 @@ INFO   127.0.0.1:55528 - "GET / HTTP/1.1" 200
 INFO   127.0.0.1:56010 - "GET /users/ HTTP/1.1" 200
 INFO   127.0.0.1:42704 - "PUT /users/1 HTTP/1.1" 200
 INFO   127.0.0.1:48590 - "DELETE /users/1 HTTP/1.1" 200
+
+
+alembic revision --autogenerate -m "create users table"
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.autogenerate.compare] Detected added table 'users'
+  Generating /home/ubuntu/Full-Stack-Web-Developer/FastAPI/migrations/versions/48ad6283cc24_create_users_table.py ...  done
+
+
+ alembic upgrade head
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 48ad6283cc24, create users table
