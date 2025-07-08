@@ -25,7 +25,7 @@ def client(session):
 def session():
     # Não verificar se está trabalhando na mesma thread
     engine = create_engine(
-        'sqlite:///:memory:',
+        'sqlite:///:memory:',  # bd criado na ram
         connect_args={'check_same_thread': False},
         poolclass=StaticPool,
     )

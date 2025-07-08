@@ -19,8 +19,6 @@ from fast_zero.schemas import (
 
 app = FastAPI()
 
-database = []
-
 
 # EndPoint
 @app.get('/', status_code=HTTPStatus.OK, response_model=Message)
@@ -100,9 +98,7 @@ def update_user(
 
 
 @app.delete('/users/{user_id}', response_model=Message)
-def delete_user(
-    user_id: int, user: UserShema, session: Session = Depends(get_session)
-):
+def delete_user(user_id: int, session: Session = Depends(get_session)):
     db_user = session.scalar(select(User).where(User.id == user_id))
 
     if not db_user:

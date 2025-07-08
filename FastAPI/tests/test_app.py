@@ -12,7 +12,7 @@ def test_read_root_success_and_hello_world(client):
     }
 
 
-def test_create_user(client):
+def test_create_user(client, user):
     response = client.post(  # UserSchema
         '/users/',
         json={
@@ -53,7 +53,7 @@ def test_read_user_with_user(client, user):
     }
 
 
-def test_update_user(client):
+def test_update_user(client, user):
     response = client.put(
         '/users/1',
         json={
@@ -70,7 +70,8 @@ def test_update_user(client):
     }
 
 
-def test_delete_user(client):
+def test_delete_user(client, user):
     response = client.delete('/users/1')
 
+    assert response.status_code == HTTPStatus.OK
     assert response.json() == {'message': 'User deleted'}

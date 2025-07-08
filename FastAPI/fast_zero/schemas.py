@@ -11,10 +11,6 @@ class UserShema(BaseModel):
     password: str
 
 
-class UserDB(UserShema):
-    id: int
-
-
 class UserPublic(BaseModel):
     id: int
     username: str
