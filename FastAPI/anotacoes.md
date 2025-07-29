@@ -194,3 +194,21 @@ INFO  [alembic.autogenerate.compare] Detected added table 'users'
 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
 INFO  [alembic.runtime.migration] Running upgrade  -> 48ad6283cc24, create users table
+
+❯ poetry add "pwdlib[argon2]"
+Using version ^0.2.1 for pwdlib
+
+Updating dependencies
+Resolving dependencies... (1.4s)
+
+Package operations: 5 installs, 0 updates, 0 removals
+
+  - Installing pycparser (2.22)
+  - Installing cffi (1.17.1)
+  - Installing argon2-cffi-bindings (21.2.0)
+  - Installing argon2-cffi (23.1.0)
+  - Installing pwdlib (0.2.1)
+
+Writing lock file 
+=> para senhas
+

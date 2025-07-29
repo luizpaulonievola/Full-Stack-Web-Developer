@@ -12,7 +12,7 @@ def test_read_root_success_and_hello_world(client):
     }
 
 
-def test_create_user(client, user):
+def test_create_user(client):
     response = client.post(  # UserSchema
         '/users/',
         json={
