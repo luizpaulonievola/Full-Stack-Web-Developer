@@ -212,3 +212,21 @@ Package operations: 5 installs, 0 updates, 0 removals
 Writing lock file 
 => para senhas
 
+FastAPI  on    main  poetry add pyjwt                                                                       1 ✘  fast-zero-py3.12    base    with ubuntu@arm  at 14:42:16   
+Using version ^2.10.1 for pyjwt
+
+Updating dependencies
+Resolving dependencies... (0.2s)
+
+Package operations: 1 install, 0 updates, 0 removals
+
+  - Installing pyjwt (2.10.1)
+
+Writing lock file
+
+# Site para verificar hash
+-> https://www.jwt.io/
+
+>>> import secrets
+>>> dir(secrets)
+['DEFAULT_ENTROPY', 'SystemRandom', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_sysrand', 'base64', 'choice', 'compare_digest', 'randbelow', 'randbits', 'token_bytes', 'token_hex', 'token_urlsafe']
