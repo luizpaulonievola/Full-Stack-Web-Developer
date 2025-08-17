@@ -43,7 +43,7 @@ quote-style = 'single'
 [tool.taskipy.tasks]
 run = 'fastapi dev fast_zero/app.py --host 0.0.0.0 --port 5000'
 pre_test = 'task lint'
-test = 'pytest --cov=fast_zero -vv'
+test = 'pytest --cov=fast_zero -vv' # com -x paa no primeiro test
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
 post_test = 'coverage html'

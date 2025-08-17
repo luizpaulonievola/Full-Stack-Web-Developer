@@ -1,11 +1,11 @@
-from pydantic import BaseModel, ConfigDict, EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
 class Message(BaseModel):
     message: str
 
 
-class UserShema(BaseModel):
+class UserSchema(BaseModel):
     username: str
     email: EmailStr
     password: str
@@ -23,9 +23,10 @@ class UserList(BaseModel):
 
 
 class Token(BaseModel):
-    access_token: str  # O tipo de token gerado por JWT
-    token_type: str  # O modelo que o cliente deve usar
+    access_token: str
+    token_type: str
 
 
-class TokenData(BaseModel):
-    username: str | None = None
+class FilterPage(BaseModel):
+    offset: int = Field(0, ge=0)
+    limit: int = Field(100, ge=1)
