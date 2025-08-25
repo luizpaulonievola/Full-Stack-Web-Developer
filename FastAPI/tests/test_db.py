@@ -12,8 +12,6 @@ def test_create_user(session):
     session.add(user)
     session.commit()
 
-    result = session.scalar(
-        select(User).where(User.username == 'test_user')
-    )
+    result = session.scalar(select(User).where(User.username == 'test_user'))
 
     assert result.username == 'test_user'

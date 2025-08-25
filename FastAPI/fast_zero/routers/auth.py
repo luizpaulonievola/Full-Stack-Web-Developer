@@ -1,3 +1,5 @@
+"""Authentication routes."""
+
 from http import HTTPStatus
 from typing import Annotated
 
@@ -19,9 +21,8 @@ T_Session = Annotated[Session, Depends(get_session)]
 
 @router.post('/token', response_model=Token)
 def login_for_access_token(session: T_Session, form_data: T_OAuth2Form):
-    user = session.scalar(
-        select(User).where(User.email == form_data.username)
-    )
+    """Login for access token."""
+    user = session.scalar(select(User).where(User.email == form_data.username))
 
     if not user:
         raise HTTPException(

@@ -107,8 +107,8 @@ def get_current_user(
         if not subject_email:
             raise credentials_exception
 
-    except DecodeError:
-        raise credentials_exception
+    except DecodeError as exc:
+        raise credentials_exception from exc
 
     # Busca o usuário no banco de dados com base no e-mail do token
     user = session.scalar(select(User).where(User.email == subject_email))

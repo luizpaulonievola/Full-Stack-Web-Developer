@@ -1,3 +1,5 @@
+"""User routes."""
+
 from http import HTTPStatus
 from typing import Annotated
 
@@ -22,10 +24,9 @@ T_Session = Annotated[Session, Depends(get_session)]
 T_CurrentUser = Annotated[User, Depends(get_current_user)]
 
 
-@router.post(
-    '/', status_code=HTTPStatus.CREATED, response_model=UserPublic
-)
+@router.post('/', status_code=HTTPStatus.CREATED, response_model=UserPublic)
 def create_user(user: UserSchema, session: T_Session):
+    """Create a new user."""
     db_user = session.scalar(
         select(User).where(
             (User.username == user.username) | (User.email == user.email)
@@ -63,6 +64,7 @@ def create_user(user: UserSchema, session: T_Session):
 def read_users(
     session: T_Session, filter_users: Annotated[FilterPage, Query()]
 ):
+    """Read all users."""
     users = session.scalars(
         select(User).offset(filter_users.offset).limit(filter_users.limit)
     ).all()
@@ -77,6 +79,7 @@ def update_user(
     session: T_Session,
     current_user: T_CurrentUser,
 ):
+    """Update a user."""
     if current_user.id != user_id:
         raise HTTPException(
             status_code=HTTPStatus.FORBIDDEN,
@@ -104,6 +107,7 @@ def delete_user(
     session: T_Session,
     current_user: T_CurrentUser,
 ):
+    """Delete a user."""
     if current_user.id != user_id:
         raise HTTPException(
             status_code=HTTPStatus.FORBIDDEN,
