@@ -27,3 +27,10 @@ yarn-error.log*
 .aiexclude
 GEMINI.md
 package-lock.json
+.copilotignore
+.aiexclude
+copilot.md
+main.js
+comandos.txt
+fluxograma_projeto.py
+.vscode

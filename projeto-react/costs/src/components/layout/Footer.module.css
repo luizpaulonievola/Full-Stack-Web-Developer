@@ -1,0 +1,73 @@
+/*
+ * Footer.module.css
+ *
+ * Este arquivo de módulo CSS define os estilos para o componente Footer da aplicação.
+ * A estilização abrange o contêiner principal do rodapé, a lista de redes sociais e os ícones individuais,
+ * garantindo uma apresentação visualmente coesa e profissional.
+ */
+
+/*
+ * Estilo principal para o rodapé.
+ * Define um fundo escuro com texto claro, preenchimento generoso e alinhamento centralizado,
+ * criando uma base sólida e visualmente agradável para o final da página.
+ */
+.footer {
+    background-color: #222; /* Cor de fundo escura para um contraste elegante. */
+    color: #fff; /* Cor do texto branca para garantir legibilidade. */
+    padding: 3em; /* Preenchimento interno para criar espaço e respiro visual. */
+    text-align: center; /* Alinhamento centralizado de todo o conteúdo do rodapé. */
+}
+
+/*
+ * Estilização para a lista de redes sociais.
+ * Utiliza Flexbox para alinhar os ícones horizontalmente e centralizá-los,
+ * removendo os marcadores de lista padrão para um design limpo.
+ */
+.social_list {
+    display: flex; /* Ativa o layout Flexbox para alinhamento flexível. */
+    justify-content: center; /* Centraliza os itens da lista no eixo principal (horizontal). */
+    list-style-type: none; /* Remove os marcadores de lista (pontos). */
+}
+
+/*
+ * Estilo para cada item da lista de redes sociais.
+ * Adiciona margem horizontal para espaçar os ícones de forma equilibrada.
+ */
+.social_list li {
+    margin: 0 1em; /* Margem de 1em em cada lado para um espaçamento consistente. */
+}
+
+/*
+ * Efeito de hover para os itens da lista de redes sociais.
+ * Altera a cor do ícone ao passar o mouse, fornecendo feedback interativo ao usuário
+ * e incentivando o engajamento.
+ */
+.social_list li:hover {
+    color: #ffbb33; /* Cor de destaque amarela para o efeito de hover. */
+}
+
+/*
+ * Estilização para os ícones SVG dentro da lista de redes sociais.
+ * Define o tamanho da fonte para aumentar o tamanho do ícone e altera o cursor para indicar que são clicáveis.
+ */
+.social_list svg {
+    font-size: 2.5em; /* Aumenta o tamanho do ícone para melhor visibilidade. */
+    cursor: pointer; /* Altera o cursor para 'pointer' para indicar interatividade. */
+}
+
+/*
+ * Estilo para a seção de direitos autorais.
+ * Adiciona uma margem superior para separar o texto de direitos autorais da lista de redes sociais.
+ */
+.copy_right {
+    margin-top: 2em; /* Margem superior para criar um espaçamento vertical. */
+}
+
+/*
+ * Estilização para o texto em destaque nos direitos autorais.
+ * Aplica negrito e uma cor de destaque para enfatizar o nome da empresa ou projeto.
+ */
+.copy_right span {
+    font-weight: bold; /* Aplica peso de fonte em negrito. */
+    color: #ffbb33; /* Cor de destaque amarela para o texto. */
+}

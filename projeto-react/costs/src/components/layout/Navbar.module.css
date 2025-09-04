@@ -1,0 +1,62 @@
+/*
+ * Navbar.module.css
+ *
+ * Este arquivo contém os estilos para o componente de barra de navegação (Navbar).
+ * A abordagem de "CSS Modules" é utilizada aqui, o que significa que esses estilos
+ * são escopados localmente para o componente Navbar, evitando conflitos de nomes
+ * com outros estilos no projeto.
+ */
+
+/*
+ * Define o container principal da barra de navegação.
+ * - `display: flex`: Torna o container um flex container, permitindo alinhar os itens filhos.
+ * - `justify-content: space-between`: Distribui o espaço entre os itens. O primeiro item vai para o início e o último para o final.
+ * - `background-color: #222`: Define uma cor de fundo escura para a barra de navegação.
+ * - `padding: 1em`: Adiciona um preenchimento interno de 1em em todos os lados.
+ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  padding: 1em;
+}
+
+/*
+ * Estiliza a lista não ordenada (ul) que contém os links de navegação.
+ * - `display: flex`: Alinha os itens da lista (os `<li>`) em uma linha.
+ * - `list-style: none`: Remove os marcadores (pontos) padrão da lista.
+ * - `align-items: center`: Centraliza verticalmente os itens da lista.
+ */
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+/*
+ * Define o espaçamento para cada item da lista de navegação.
+ * - `margin-right: 1em`: Adiciona uma margem de 1em à direita de cada item, separando-os.
+ */
+.item {
+  margin-right: 2em;
+}
+
+/*
+ * Estiliza os links (`<a>`) dentro de cada item da lista.
+ * - `color: #fff`: Define a cor do texto dos links como branco.
+ * - `text-decoration: none`: Remove o sublinhado padrão dos links.
+ */
+.item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Define o efeito visual quando o cursor do mouse passa sobre um link.
+ * - `color: #ffbb33`: Muda a cor do texto do link para um tom de amarelo/laranja.
+ * - `text-decoration: none`: Garante que o sublinhado não apareça durante o hover.
+ */
+.item a:hover {
+  color: #ffbb33;
+  text-decoration: none;
+}
