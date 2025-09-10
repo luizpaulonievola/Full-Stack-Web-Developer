@@ -21,6 +21,9 @@ function NewProject() {
             .then((data) => {
                 console.log(data);
                 // redirect})
+                navigate('/projects', {
+                    state: { message: 'Projeto criado com sucesso!' }, // Passada a nova pagina projects e vai ser imprimida pello estado
+                });
             })
             .catch((err) => console.log(err));
     }

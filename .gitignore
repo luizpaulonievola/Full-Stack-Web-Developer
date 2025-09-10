@@ -6,3 +6,5 @@ docker-nodejs/package-lock.json
 __pycache__
 *.pyc
 database.db
+projeto-react/Contador.js
+projeto-react/.eslintrc.json
