@@ -34,3 +34,6 @@ main.js
 comandos.txt
 fluxograma_projeto.py
 .vscode
+.roo
+.mypy_cache
+.rootignore
