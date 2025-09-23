@@ -27,7 +27,11 @@ function ProjectForm({ handleSubmit, btntext, projectData }) {
     };
 
     function handleChange(e) {
-        setProject({ ...project, [e.target.name]: e.target.value });
+        const { name, value, type } = e.target;
+        setProject({
+            ...project,
+            [name]: type === 'number' ? parseFloat(value) || '' : value,
+        });
     }
 
     function handleCategory(e) {

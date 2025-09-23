@@ -1,37 +1,22 @@
 {
   "projects": [
     {
-      "id": "4795",
-      "name": "Luiz Paulo",
-      "budget": "50",
+      "id": "0ea2",
+      "name": "Servidor de dados",
+      "budget": 5000,
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "1",
+        "name": "Infra"
       },
-      "costs": 0,
-      "services": []
-    },
-    {
-      "id": "be8e",
-      "name": "RAM Used",
-      "budget": "10",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "costs": 0,
-      "services": []
-    },
-    {
-      "id": "5ac0",
-      "name": "Luiz",
-      "budget": "1",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "costs": 0,
-      "services": []
+      "cost": 500,
+      "services": [
+        {
+          "name": "Hardware",
+          "cost": "500",
+          "description": "Hardware para o servidor.",
+          "id": "25d6eab3-82d0-4d34-b2ac-5c8fc51c4fbd"
+        }
+      ]
     }
   ],
   "categories": [

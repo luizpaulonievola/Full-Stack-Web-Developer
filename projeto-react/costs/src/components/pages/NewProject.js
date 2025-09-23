@@ -7,7 +7,7 @@ function NewProject() {
 
     function createPost(project) {
         // initialize costs and services
-        project.costs = 0;
+        project.cost = 0;
         project.services = [];
 
         fetch('/projects', {
