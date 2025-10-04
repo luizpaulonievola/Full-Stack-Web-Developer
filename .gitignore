@@ -10,3 +10,5 @@ projeto-react/Contador.js
 projeto-react/.eslintrc.json
 projeto-react/.roo/mcp.json
 projeto-react/AGENTS.md
+Typescript/.prettierignore
+Typescript/.prettierrc

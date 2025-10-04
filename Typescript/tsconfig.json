@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // --- Estrutura do projeto ---
+    "rootDir": "src", // Pasta de origem
+    "outDir": "dist", // Pasta de saída
+
+    // --- Ambiente / Output ---
+    "target": "esnext", // Versão JS alvo (podes usar "esnext")
+    "module": "commonjs", // Sistema de módulos (trocar para "nodenext" se usares ESM)
+
+    // --- Outputs auxiliares ---
+    "sourceMap": true, // Gera mapas para debug
+    "declaration": false, // Sem .d.ts (necessário só em bibliotecas)
+    // "declarationMap": true,  // Mapa para arquivos .d.ts
+
+    // --- Verificação de tipos ---
+    "strict": true, // Ativa modo estrito
+    "noImplicitAny": true, // Proíbe "any" implícito
+    "strictNullChecks": true, // Distingue null/undefined
+    // "noUncheckedIndexedAccess": true,   // Arrays/objetos podem dar undefined
+    // "exactOptionalPropertyTypes": true, // Torna opcionais mais rigorosos
+
+    // --- Produtividade / Interop ---
+    "esModuleInterop": true, // Permite importar libs JS como ES6
+    "skipLibCheck": true // Ignora erros em .d.ts de terceiros
+
+    // --- Estilo / boas práticas ---
+    // "noImplicitReturns": true,            // Exige return em todas branches
+    // "noImplicitOverride": true,           // Obriga a marcar override
+    // "noUnusedLocals": true,               // Erro se variável não usada
+    // "noUnusedParameters": true,           // Erro se parâmetro não usado
+    // "noFallthroughCasesInSwitch": true,   // Evita "cair" em outro case
+    // "noPropertyAccessFromIndexSignature": true // Força obj["key"] em vez de obj.key
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
