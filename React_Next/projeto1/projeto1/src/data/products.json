@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "produto": "Teclado #1",
+    "valor": 1741.35,
+    "desconto": 35,
+    "disponivel": false
+  },
+  {
+    "id": 2,
+    "produto": "Pasta Termica #2",
+    "valor": 772.38,
+    "desconto": 32,
+    "disponivel": true
+  },
+  {
+    "id": 3,
+    "produto": "Webcam #3",
+    "valor": 355.15,
+    "desconto": 8,
+    "disponivel": false
+  },
+  {
+    "id": 4,
+    "produto": "Teclado sem Fio #4",
+    "valor": 1592.21,
+    "desconto": 0,
+    "disponivel": true
+  },
+  {
+    "id": 5,
+    "produto": "HD #5",
+    "valor": 1020.67,
+    "desconto": 29,
+    "disponivel": true
+  },
+  {
+    "id": 6,
+    "produto": "Placa de Video #6",
+    "valor": 998.71,
+    "desconto": 0,
+    "disponivel": true
+  },
+  {
+    "id": 7,
+    "produto": "Monitor 4K #7",
+    "valor": 627.73,
+    "desconto": 35,
+    "disponivel": false
+  },
+  {
+    "id": 8,
+    "produto": "Webcam #8",
+    "valor": 1554.44,
+    "desconto": 20,
+    "disponivel": true
+  },
+  {
+    "id": 9,
+    "produto": "Nobreak #9",
+    "valor": 825.73,
+    "desconto": 16,
+    "disponivel": true
+  },
+  {
+    "id": 10,
+    "produto": "Teclado sem Fio #10",
+    "valor": 1804.9,
+    "desconto": 8,
+    "disponivel": false
+  }
+]

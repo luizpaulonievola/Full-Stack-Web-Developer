@@ -1,0 +1,53 @@
+# Ignorar dependências e builds
+node_modules/
+dist/
+build/
+out/
+.next/
+.cache/
+coverage/
+
+# Arquivos de configuração de ambiente
+.env
+.env.*
+!.env.example
+
+# Logs e temporários
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store
+
+# Arquivos de lock (se não quiser que influenciem sugestões)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Banco de dados e arquivos binários
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.sdb
+*.s3db
+
+# Arquivos de mídia grandes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.wav
+*.webm
+*.zip
+*.tar
+*.gz
+
+# Documentação ou textos que não devem influenciar o código
+docs/
+README.md
+CHANGELOG.md
+arquivo
