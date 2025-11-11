@@ -1,0 +1,10 @@
+[
+    { "id": 0, "categ": "Esporte", "valor": "120000.00", "modelo": "Golf Gti" },
+    { "id": 1, "categ": "Esporte", "valor": "320000.00", "modelo": "BMW Z4" },
+    { "id": 2, "categ": "SUV", "valor": "220000.00", "modelo": "Honda HR-V" },
+    { "id": 3, "categ": "SUV", "valor": "120000.00", "modelo": "T-Cross" },
+    { "id": 4, "categ": "Sedan", "valor": "110000.00", "modelo": "Civic" },
+    { "id": 5, "categ": "Sedan", "valor": "130000.00", "modelo": "Corolla" },
+    { "id": 6, "categ": "Hatch", "valor": "60000.00", "modelo": "HB20" },
+    { "id": 7, "categ": "Hatch", "valor": "75000.00", "modelo": "Onix" }
+]

@@ -1,14 +1,189 @@
+# ===================================================================
+# Geral
+# ===================================================================
+.vscode/
+.idea/
+.DS_Store
+*.pem
+*.log
+*.tmp
+*.temp
+*.swp
+.cache/
 .env
-node_modules
-docker-nodejs/package-lock.json
-.vscode
-.cache
-__pycache__
-*.pyc
+.env*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+
+# ===================================================================
+# Node.js / Javascript / Typescript
+# ===================================================================
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
+dist/
+build/
+out/
+.next/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# ===================================================================
+# Python
+# ===================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.mo
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+instance/
+.webassets-cache
+.scrapy
+docs/_build/
+.pybuilder/
+target/
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+.python-version
+__pypackages__/
+celerybeat-schedule
+celerybeat.pid
+*.sage.py
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.spyderproject
+.spyproject
+.ropeproject
+/site
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+poetry.toml
+.ruff_cache/
+pyrightconfig.json
 database.db
+database.db-shm
+database.db-wal
+
+# ===================================================================
+# Arquivos de IA e Documentação (Não versionar)
+# ===================================================================
+.aiexclude
+GEMINI.md
+.copilotignore
+copilot.md
+anotacoes.md
+anotacoes.txt
+orientacoes-roo.md
+README.md
+CHANGELOG.md
+docs/
+.roo/
+
+# ===================================================================
+# Binários e Mídia
+# ===================================================================
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.sdb
+*.s3db
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mp3
+*.wav
+*.webm
+*.zip
+*.tar
+*.gz
+665370.jpg
+8ce7a637a5bd74839c438ad9655c4ac3_480x480.webp
+
+# ===================================================================
+# Específicos de Projetos (Manter no root)
+# ===================================================================
+# Docker
+docker-nodejs/package-lock.json
+
+# Projeto React
 projeto-react/Contador.js
 projeto-react/.eslintrc.json
-projeto-react/.roo/mcp.json
-projeto-react/AGENTS.md
+
+# Typescript Project
 Typescript/.prettierignore
 Typescript/.prettierrc
+main.js
+comandos.txt
+fluxograma_projeto.py
+
+# Next.js
+React_Next/projeto1/projeto1/Main.tsx
+React_Next/projeto1/projeto1/arquivo
+AGENTS.md

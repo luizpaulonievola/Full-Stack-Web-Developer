@@ -5,10 +5,10 @@ import { Product } from '@/types/Product';
 import { useEffect } from 'react';
 
 function desconto(v: number, d: number) {
-  return (v - (v * d) / 100).toFixed(2);
+  return v - (v * d) / 100;
 }
 
-export default function produtos() {
+export default function Produtos() {
   const router = useRouter();
 
   useEffect(() => {

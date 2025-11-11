@@ -1,0 +1,24 @@
+{
+  "name": "binance-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "monitor": "pm2 start index.js --name 'binance-monitor'",
+    "logs": "pm2 logs binance-monitor",
+    "stop": "pm2 stop binance-monitor"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.0",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "pm2": "^6.0.13"
+  }
+}

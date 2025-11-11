@@ -1,7 +1,6 @@
-import Produtos from './produtos/produtos';
 import Tarefas from '@/components/Tarefas';
 
-const name = 'Luiz Paulo Nievola';
+import Produtos from './produtos/Produtos';
 
 export default function Home() {
   return (
@@ -12,11 +11,11 @@ export default function Home() {
   );
 }
 
-const testecss = {
+/*const testecss = {
   display: 'flex',
   justifyContent: 'center',
   alignItens: 'center',
   color: '#00f',
   backgoundColor: '#eee',
   fontSize: '20px',
-};
+};*/

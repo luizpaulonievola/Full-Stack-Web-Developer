@@ -1,24 +1,48 @@
+/* Importa as classes utilitárias do Tailwind CSS */
 @import 'tailwindcss';
 
+/* Importa estilos específicos para o componente Topo */
 @import './topo.css';
 
+/* Define variáveis CSS globais (atualmente vazio) */
 :root {
 }
 
+/* Estilos para um botão genérico */
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #66696c;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: flex; /* Exibe os itens em linha */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+  padding: 10px 20px; /* Adiciona preenchimento interno de 10px no topo/base e 20px nas laterais */
+  border-radius: 5px; /* Arredonda as bordas em 5px */
+  background-color: #66696c; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+  font-size: 16px; /* Define o tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
 }
 
+/* Estilos para o botão quando o mouse está sobre ele */
 .btn:hover {
-  background-color: #a3a6aa;
+  background-color: #a3a6aa; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilos para campo de formulário */
+.campoForm {
+  display: flex; /* Exibe os itens em linha */
+  flex-direction: column; /* Organiza os itens em coluna */
+  gap: 10px; /* Adiciona um espaço de 10px entre os itens */
+  justify-content: flex-start; /* Alinha os itens no início do contêiner */
+  align-items: flex-start; /* Alinha os itens no início do eixo transversal */
+}
+
+/* Estilos para a label de um campo de formulário */
+.campoForm label {
+  font-size: large; /* Define o tamanho da fonte como grande */
+}
+
+/* Estilos para o input de um campo de formulário */
+.campoForm input {
+  @apply w-full rounded border p-1;
 }

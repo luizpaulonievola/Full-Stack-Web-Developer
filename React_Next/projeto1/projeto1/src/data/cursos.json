@@ -1,0 +1,9 @@
+{
+  "cursos": [
+    { "id": 1, "nome": "Javascript" },
+    { "id": 2, "nome": "React" },
+    { "id": 3, "nome": "Next.js" },
+    { "id": 4, "nome": "Tailwind CSS" },
+    { "id": 5, "nome": "Node.js" }
+  ]
+}

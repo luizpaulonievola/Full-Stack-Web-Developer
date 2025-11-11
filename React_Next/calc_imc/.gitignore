@@ -40,4 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 anotacoes.md
-Main.tsx
+README.md 
+.prettierignore
+.prettierrc
+package-lock.json

@@ -1,6 +1,6 @@
 interface DisplayStateProps {
   valor: number;
-  fvalor: any;
+  fvalor: (c: number) => void;
 }
 
 function DisplayState(props: DisplayStateProps) {
@@ -10,7 +10,7 @@ function DisplayState(props: DisplayStateProps) {
     props.fvalor(c);
   }
 
-  function contador() {
+  /*function contador() {
     let c = props.valor;
     c++;
     props.fvalor(c);
@@ -20,7 +20,7 @@ function DisplayState(props: DisplayStateProps) {
     let c = props.valor;
     c--;
     props.fvalor(c);
-  }
+  }*/
 
   return (
     <div className="flex flex-col p-5 rounded-md bg-zinc-300 justify-center items-center gap-5 w-[300px]">

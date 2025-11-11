@@ -1,7 +1,33 @@
 {
   "semi": true,
-  "trailingComma": "es5",
   "singleQuote": true,
   "printWidth": 80,
-  "tabWidth": 2
+  "tabWidth": 2,
+
+  "trailingComma": "all",
+
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@/components/(.*)$",
+    "^@/lib/(.*)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderTypeScriptVersion": "5.0.0",
+
+  "overrides": [
+    {
+      "files": ["**/*.md"],
+      "options": {
+        "printWidth": 80,
+        "proseWrap": "always"
+      }
+    }
+  ]
 }

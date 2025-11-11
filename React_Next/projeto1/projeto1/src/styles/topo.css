@@ -1,4 +1,5 @@
+/* Estilos para o subtítulo no topo da página */
 .subtituloTopo {
-  color: #00f;
-  font-weight: bold;
+  color: #00f; /* Define a cor do texto como azul */
+  font-weight: bold; /* Define a fonte como negrito */
 }
